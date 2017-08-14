@@ -1,0 +1,24 @@
+[user]
+	name = username
+	email = nobody@example.jp
+[color]
+	ui = auto
+[http]
+	proxy = http://proxy.example.jp:8080
+[https]
+	proxy = http://proxy.example.jp:8080
+[credential]
+	helper = cache
+[alias]
+        co = checkout
+        ci = commit
+        st = status
+        br = branch
+        export = checkout-index -a -f --prefix=export/
+[push]
+        default = upstream
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
