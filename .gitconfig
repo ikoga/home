@@ -15,6 +15,7 @@
         st = status
         br = branch
         export = checkout-index -a -f --prefix=export/
+        ls = ls-files
 [push]
         default = upstream
 [filter "lfs"]
