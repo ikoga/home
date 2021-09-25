@@ -8,6 +8,7 @@ set fileencodings=utf-8,cp932,euc-jp,iso-2022-jp,shift-jis,utf-16,ucs-2-internal
 set termencoding=utf-8
 set fileformats=unix
 set encoding=utf-8
+set belloff=all
 
 " -- インクリメンタルサーチとハイライト
 set incsearch
