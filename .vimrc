@@ -37,6 +37,9 @@ function! TabHilight()
         highlight Tab term=underline ctermbg=Gray
 endf
 
+" -- :set paste/nopaste を F3 で切り替え
+set pastetoggle=<F3>
+
 
 " -- VIM TAB ( VIM > 7.3 )
 " http://qiita.com/wadako111%40github/items/755e753677dd72d8036d
