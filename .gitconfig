@@ -16,6 +16,7 @@
         br = branch
         export = checkout-index -a -f --prefix=export/
         ls = ls-files
+        graph = log --graph --oneline --decorate=full
 [push]
         default = upstream
 [filter "lfs"]
