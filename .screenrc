@@ -1,0 +1,35 @@
+defencoding utf8
+escape ^Tt
+startup_message off
+autodetach on
+defscrollback 99999
+bell "Bell is window %."
+bell_msg "Pi!"
+vbell off
+vbell_msg "Pi!"
+defmonitor on
+shell /bin/bash
+shelltitle "$ |bash"
+
+multiuser on
+bind w windowlist -b
+bind y eval 'echo "Re-Size Window (j:down, k:up)"' 'command -c resize'
+bind -c resize j eval 'resize +1' 'command -c resize'
+bind -c resize k eval 'resize -1' 'command -c resize'
+backtick 0 1 30 $HOME/bin/caption_stat.sh
+
+caption always "%+0<%?%F%:%{= wr} %n %t%{ww}%?%?%F%{= wdb}%:%{= ww}%? %-w%?%F%{=u dG}%?%75>%n %t%{-}%+w%100< %=%?%F%{.b}%?%?%F%{wd}%?%? %{=b bw} [%=%0`]%?"
+hardstatus alwayslastline "%H.example.jp | %l %=.: %Y-%m-%d %c:%s :."
+
+# sample
+#caption always "%+0<%?%F%:%{= wr} %n %t%{ww}%?%?%F%{= wg}%:%{= ww}%? %-w%?%F%{=u dr}%?%50>%n %t%{-}%+w%65< %=%?%F%{.b}%?%Y-%m-%d(%D) %?%F%{.m}%?%c:%s%?%F%{wd}%?%? [%0]%?"
+#caption always "[%0] %w | %h"
+
+# koga custom
+#caption always "%+0<%?%F%:%{= wr} %n %t%{ww}%?%?%F%{= wdb}%:%{= ww}%? %-w%?%F%{=u dG}%?%50>%n %t%{-}%+w%100< %=%?%F%{.b}%?%?%F%{wd}%?%? [%0]%?"
+
+# add backtick
+
+#hardstatus ignore "%w | %h"
+#hardstatus alwayslastline "[%02c:%s] %`%-w%{=b bw}%n %t%{-}%+w"
+#hardstatus alwayslastline "%H.ik.homelinux.net | %l %=.: %Y-%m-%d(%D) %c:%s :."
